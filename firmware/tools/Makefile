@@ -8,10 +8,8 @@ dfu:
 
 gccarm.installed:
 	# sudo add-apt-repository ppa:terry.guo/gcc-arm-embedded # Broken link
-	# sudo apt-get update
-	# sudo apt-get install gcc-arm-none-eabi
-
 	sudo apt-get update
+	# sudo apt-get install gcc-arm-none-eabi # Resided in broken respository
 	sudo apt-get install gcc-arm-embedded
 	touch gccarm.installed
 
