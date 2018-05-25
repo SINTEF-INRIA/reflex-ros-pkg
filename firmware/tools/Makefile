@@ -22,6 +22,7 @@ gccarm.repo-added:
 	# check Team-GCC-arm-embedded, and change a release you can use, change by: 
 	# sudo nano /etc/apt/sources.list.d/tema-gcc-arm-embedded-ubuntu-ppa-`lsb_release --codename | cut -f2`.list
 	# Replace releasename with a viable one from Team-GCC-arm-embedded. 
+	# Then re run make.
 
 openocd-source:
 	# git clone git://git.code.sf.net/p/openocd/code openocd-source
