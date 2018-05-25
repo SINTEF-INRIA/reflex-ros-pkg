@@ -1,4 +1,5 @@
 default: gccarm.repo-added gccarm.installed openocd dfu
+# edited by: Christian Heider, updated to work Ubuntu 16.04.
 
 # potentially this could be smarter if it detects the OS/distro or whatever.
 dfu:
@@ -17,7 +18,10 @@ gccarm.installed:
 gccarm.repo-added:
 	touch gccarm.repo-added
 	sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
-
+	# if crash due to non-compatable version of Ubuntu
+	# check Team-GCC-arm-embedded, and change a release you can use, change by: 
+	# sudo nano /etc/apt/sources.list.d/tema-gcc-arm-embedded-ubuntu-ppa-`lsb_release --codename | cut -f2`.list
+	# Replace releasename with a viable one from Team-GCC-arm-embedded. 
 
 openocd-source:
 	# git clone git://git.code.sf.net/p/openocd/code openocd-source
